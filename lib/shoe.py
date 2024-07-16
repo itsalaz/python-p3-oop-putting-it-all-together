@@ -21,9 +21,10 @@ class Shoe:
 
     @size.setter
     def size(self, value):
-        if not isinstance(value, int):
-            raise ValueError("size must be an integer")
-        self._size = value
+        if type(value) == int:
+                self._size = value
+        else:
+            print("size must be an integer")
         
     
     def cobble(self):
